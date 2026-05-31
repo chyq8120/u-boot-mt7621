@@ -7,13 +7,13 @@ on:
         description: 'Debug Build'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
      use_mips16:
         description: 'Use MIPS16 ASE'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
      boot_delay:
         description: 'Boot Delay'
@@ -36,25 +36,25 @@ on:
         description: 'Enable All Ethernet PHY'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
      cmdline:
         description: 'U-Boot Command Line'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
      tftp:
         description: 'TFTP'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
      netconsole:
         description: 'NetConsole'
         required: true
         type: boolean
-        default: 'false'
+        default: false
 
 jobs:
   build:
@@ -76,7 +76,7 @@ jobs:
 
       - name: Base Configuration
         working-directory: u-boot-mt7621/uboot-5.x.x.x
-        run: make archer_ax23_config
+        run: make xiaomi_mir3g_config
  
       - name: "Apply Configuration"
         working-directory: u-boot-mt7621/uboot-5.x.x.x
